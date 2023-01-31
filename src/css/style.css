@@ -1,0 +1,144 @@
+:root {
+ --bg-btn-red: #d5011d;
+ --bg-btn-green: #2f9e18;
+
+ --bg-filter-red: linear-gradient(90deg, rgba(0,0,0,1) 20%, rgba(213,1,29,0.45) 35%, rgba(213,1,29,0.1) 50%, rgba(213,1,29,0.45) 65%, rgba(0,0,0,1) 80%);
+ 
+ --bg-filter-green: linear-gradient(90deg, rgba(0,0,0,1) 20%, rgba(1,213,4,0.45) 35%, rgba(1,213,4,0.1) 50%, rgba(1,213,4,0.45) 65%, rgba(0,0,0,1) 80%);
+}
+
+body {
+  font-family: 'Poppins';
+}
+
+.header {
+  display:flex;
+  justify-content: space-between;
+  padding: 20px;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.header .logo {
+  width: 70px;
+  border-radius: 90%;
+}
+
+.header nav {
+  display:flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.header nav a {
+  font-size: 20px;
+  font-weight: 500;
+  color: #fff;
+  border-radius: 70px;
+  padding: 10px 15px;
+  transition: .5s;
+  background-color: var(--bg-btn-red);
+  transition: .5s all ease-in-out
+}
+
+.header nav a:hover {
+  transform: scale(1.05);
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  height: calc(100vh - 112px);
+  padding: 0 30px 30px;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.container .img-title {
+  width: 400px;
+}
+
+.container .mario-mobile {
+  display: none;
+}
+
+.container .description {
+  color: #fff;
+  width: 85%;
+  font-size: 24px;
+  margin: 30px 0;
+}
+
+.container .btn-trailer {
+  color: #fff;
+  background-color: var(--bg-btn-red);
+  padding: 15px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+  border-radius: 70px;
+  text-transform: uppercase;
+  transition: .5s all ease-in-out
+}
+
+.container .btn-trailer:hover{
+  transform: scale(1.05);
+}
+
+.bg-video {
+  position: absolute;
+  z-index: -1;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+}
+
+.bg-video::after{
+  content: "";
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  background: rgb(0,0,0);
+  background: var(--bg-filter-red)
+}
+
+.bg-video .video {
+  height: 100vh;
+}
+
+.modal {
+  background-color: rgba(52, 52, 50, 0.749);
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  visibility: hidden;
+}
+
+.modal-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  gap: 10px;
+}
+
+.close-modal {
+  background-color: #fff;
+  color: #f03a17;
+  font-weight: bold;
+  font-size: 20px;
+  width: 30px;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 100%;
+}
+
+.modal.shown {
+  opacity: 1;
+  visibility: visible;
+}

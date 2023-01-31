@@ -1,0 +1,36 @@
+@media (max-width: 1200px) {
+
+  .container {
+    max-width: 900px;
+  } 
+
+  .container .info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .container .mario {
+    display: none;
+  }
+
+  .container .mario-mobile {
+    display: block
+  }
+
+  .info .info-imgs {
+    display: flex;
+    gap: 30px
+  }
+
+  .container .info .info-imgs .img-title {
+    width: 300px;
+    height: 140px
+  }
+
+  .container .info .info-imgs .mario-mobile {
+    width: 200px;
+    height: 140px;
+  }
+}
